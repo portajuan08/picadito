@@ -1,0 +1,17 @@
+
+<ion-view view-title="Jugadores">
+        <ion-content>
+            <!-- LIST -->
+            <div >
+                <div class="list card" ng-repeat="object in jugador.data">
+                    <div class="item item-icon-right item-icon-left">
+                        <h2 class="text-center">{{object.firstName}}</h2>
+                    </div>
+                    <div class="item item-body">
+                        {{object.lastName}}
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+</ion-view>
+

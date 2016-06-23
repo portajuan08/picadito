@@ -1,0 +1,28 @@
+<ion-view view-title="Arma tu picadito">
+
+    <ion-content class="padding has-header">
+
+        <div class="bar bar-header">
+	    <h1 class="input-label">Login</h1>
+        </div>
+        <div class="bar bar-subheader">
+            <form ng-submit="login.signin()">
+                <div class="list">
+                    <label class="item item-input">
+                        <input id="email" name="email" type="email" placeholder="Your email" ng-model="login.email">
+                    </label>
+                    <label class="item item-input">
+                        <input id="password" name="password" type="password" placeholder="Your password" ng-model="login.password">
+                    </label>
+                </div>
+		<div ng-show="login.error" class="alert alert-danger">{{login.error}}</div>
+		<div ng-show="login.success" class="alert alert-success">{{login.success}}</div>
+                <div class="padding">
+                    <button class="button button-block button-positive" type="submit">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<!-- Backand Login model -->
+<div class="header">
+    <h2>Reset Password</h2>
+    <h4>User: {{changePassword.currentUserInfo}}</h4>
+</div>
+<div class="body">
+    <form class="form" name="myForm" ng-submit="changePassword.update()" novalidate ng-model-options="{debounce: 200}">
+        <fieldset>
+            <div ng-hide="changePassword.token" class="form-group">
+                <label for="old-password">Old Password</label>
+                <input type="password"
+                       class="form-control"
+                       name="oldPassword"
+                       id="old-password"
+                       ng-model="changePassword.oldPassword">
+            </div>
+            <div class="form-group">
+                <label for="new-password">New Password</label>
+                <input type="password"
+                       class="form-control"
+                       name="newPassword"
+                       id="new-password"
+                       ng-model="changePassword.newPassword"
+                       ng-minlength="6"
+                       ng-maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password"
+                       class="form-control"
+                       name="confirmPassword"
+                       id="confirm-password"
+                       ng-model="changePassword.confirmPassword">
+            </div>
+            <div class="form-group">
+                <button type="submit"
+                        class="btn btn-primary pull-right">
+                    Update
+                </button>
+            </div>
+        </fieldset>
+    </form>
+    <div ng-show="changePassword.error" class="alert alert-danger">{{changePassword.error}}</div>
+    <div ng-show="changePassword.success" class="alert alert-success">{{changePassword.success}}</div>
+</div>

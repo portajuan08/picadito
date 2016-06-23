@@ -1,0 +1,95 @@
+<ion-view view-title="Registrar">
+    <ion-content class="padding has-header">
+        <div class="bar bar-subheader">
+            <form ng-submit="login.signup()">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Nombre</span>
+                        <input type="text" class="form-control"
+                            ng-model="login.firstName"
+                            placeholder="Ingrese su nombre">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Apellido</span>
+                        <input type="text" class="form-control"
+                            ng-model="login.lastName"
+                            placeholder="Ingrese su apellido">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Email</span>
+                        <input type="text" class="form-control"
+                            ng-model="login.email"
+                            placeholder="Ingrese su email">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Contraseña</span>
+                        <input type="password" class="form-control"
+                            ng-model="login.password"
+                            placeholder="Ingrese su contraseña">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Confirmar Contraseña</span>
+                        <input type="password" class="form-control"
+                            ng-model="login.confirmpass"
+                            placeholder="Reingrese su contraseña">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Telefono</span>
+                        <input type="number" class="form-control"
+                            ng-model="login.telefono"
+                            placeholder="Ingrese su telefono">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Fecha de nacimiento</span>
+                        <input type="date" class="form-control"
+                            ng-model="login.fechanac"
+                            placeholder="Ingrese su fecha de nacimiento">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Sexo</span>
+			<ion-list>
+			  <ion-radio ng-model="login.sexo" value="M">Masculino</ion-radio>
+			  <ion-radio ng-model="login.sexo" value="F">Femenino</ion-radio>
+			</ion-list>
+                    </label>
+		   <label class="item item-input item-select">
+		   	<div class="input-label">Posicion</div>
+		    	<select ng-model="login.posicion">
+			      <option value="ARQ" checked=true>Arquero</option>
+			      <option value="DEF" >Defensor</option>
+			      <option value="MED" >Mediocampista</option>
+			      <option value="DEL" >Delantero</option>
+		    	</select>
+		    </label>
+                    <label class="item item-input item-stacked-label">
+                    	<span class="input-label">Club</span>
+                        <input type="text" class="form-control"
+                            ng-model="login.hincha"
+                            placeholder="Ingrese club del que es hincha">
+                    </label>
+		   <label class="item item-input item-select">
+		   	<div class="input-label">Pie Habil</div>
+		    	<select  ng-model="login.piepreferido">
+			      <option value="I" checked=true>Izquierdo</option>
+			      <option value="I" >Derecho</option>
+			      <option value="I" >Ambos</option>
+		    	</select>
+		    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Informacion</span>
+                        <textarea class="form-control"
+                            ng-model="login.informacion"
+                            placeholder="Informacion Adicional"></textarea>
+                    </label>
+                </div>
+		<div ng-show="login.error" class="alert alert-danger">{{login.error}}</div>
+		<div ng-show="login.success" class="alert alert-success">{{login.success}}</div>
+                <div class="padding">
+                    <button class="button button-block button-positive" type="submit">
+                        Registrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>
